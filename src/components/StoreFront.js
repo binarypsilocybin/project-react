@@ -23,7 +23,7 @@ export default function StoreFront() {
         setProducts([...products, {
             id: products.length + 1,
             name: name,
-            description, description
+            description: description
         }]);
         setName("");
         setDescription("");
