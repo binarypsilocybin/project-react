@@ -220,3 +220,15 @@ form {
   border: 1px solid var(--dark);
   color: var(--dark);
 }
+
+/* APP */
+
+#re-render {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+#map {
+  height: 100%;
+}
