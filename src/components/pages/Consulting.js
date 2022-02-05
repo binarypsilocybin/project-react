@@ -19,6 +19,11 @@ export default function StoresMap() {
         });
 
     },[])
+    const stores = {
+       central: [12.567898, 55.67583],
+        norrebro: [12.553806, 55.699299],
+        airport: [12.650784, 55.618042]
+    }
 
       return <>
         <button id="re-render" onClick={() => setRandom(Math.random())}>Re-render</button>
