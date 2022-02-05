@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../App.css';
-
 import '../../components/Product.css';
 
 

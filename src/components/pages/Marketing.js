@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import '../../App.css';
 
-export default function Marketing() {
-  return (
-    <>
-      <h1 className='marketing'>MARKETING</h1>
-    </>
-  );
+export default function Clock() {
+
+  const [date, setDate] = useState(new Date())
+  useEffect(() => {
+    const intervalId = setInterval(()=>{
+        setDate(new Date())
+    },1000)
+    return () => {
+      clearInterval(intervalId);
+    }
+  },[])
+  return <h1>{date.toLocaleTimeString()}</h1>
+
 }
