@@ -8,6 +8,7 @@ import SeveralProjects from './components/pages/SeveralProjects';
 import AnotherProject from './components/pages/AnotherProject';
 import Marketing from './components/pages/Marketing';
 import Consulting from './components/pages/Consulting';
+import Promises from './components/pages/Promises';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/another-project' component={AnotherProject} />
         <Route path='/marketing' component={Marketing} />
         <Route path='/consulting' component={Consulting} />
+        <Route path='/promises' component={Promises} />
       </Switch>
     </Router>
   );
