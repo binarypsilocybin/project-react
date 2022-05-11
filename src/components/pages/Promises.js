@@ -1,10 +1,9 @@
-import React from 'react';
-import ShoppingWallet from '../ShoppingWallet';
-import Wallet from '../Wallet';
-import TodoApp from '../TodoApp';
+import React from "react";
+import ShoppingWallet from "../ShoppingWallet";
+import Wallet from "../Wallet";
+import TodoApp from "../TodoApp";
 
 export default function Promises() {
-
   return (
     <section className="another-project">
       <div className="wrapper">
@@ -15,7 +14,6 @@ export default function Promises() {
         <p>Lifting state up</p>
         <TodoApp />
       </div>
-    </section>  
-    )
-
+    </section>
+  );
 }

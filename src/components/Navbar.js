@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import Dropdown from './Dropdown';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import Dropdown from "./Dropdown";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -28,57 +28,53 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className="navbar">
         <div className="nabvar-wrapper">
-          
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             React training
-          
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li
-              className='nav-item'
+              className="nav-item"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
               <Link
-                to='/several-projects'
-                className='nav-links'
+                to="/several-projects"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Several Projects <i className='fas fa-caret-down' />
+                Several Projects <i className="fas fa-caret-down" />
               </Link>
               {dropdown && <Dropdown />}
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/project'
-                className='nav-links'
+                to="/project"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Project
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/another-project'
-                className='nav-links'
+                to="/another-project"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Another Project
               </Link>
             </li>
-            
           </ul>
-
         </div>
       </nav>
     </>

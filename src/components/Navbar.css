@@ -13,8 +13,6 @@
   width: 100%;
 }
 
-
-
 .nabvar-wrapper {
   max-width: 1410px;
   margin: auto;
@@ -22,11 +20,6 @@
   align-items: center;
   padding: 2rem;
 }
-
-
-
-
-
 
 .nav-menu {
   display: grid;
@@ -140,8 +133,6 @@
     color: #fff;
     font-size: 1.5rem;
   }
-
-  
 
   .nav-links-mobile:hover {
     background: #fff;

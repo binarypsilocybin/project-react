@@ -1,22 +1,20 @@
 import React from "react";
 import { useState } from "react";
 
-export default function ShoppingWallet(){
-  const [transactions, setTransactions] = useState([])
-  function handleDepositClick(){
-    setTransactions([...transactions, 10])
+export default function ShoppingWallet() {
+  const [transactions, setTransactions] = useState([]);
+  function handleDepositClick() {
+    setTransactions([...transactions, 10]);
   }
-  function handleWithdrawClick(){
-    setTransactions([...transactions, -10])
-
-  }
-
-  function handleClearClick(){
-    setTransactions([])
+  function handleWithdrawClick() {
+    setTransactions([...transactions, -10]);
   }
 
+  function handleClearClick() {
+    setTransactions([]);
+  }
 
-  const sum = transactions.reduce((total, current) => total + current,0)
+  const sum = transactions.reduce((total, current) => total + current, 0);
 
   return (
     <>
@@ -31,5 +29,4 @@ export default function ShoppingWallet(){
       </ul>
     </>
   );
-
 }
