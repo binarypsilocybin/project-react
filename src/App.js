@@ -9,6 +9,7 @@ import AnotherProject from "./components/pages/AnotherProject";
 import Marketing from "./components/pages/Marketing";
 import Consulting from "./components/pages/Consulting";
 import Promises from "./components/pages/Promises";
+import Development from "./components/pages/Development";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/marketing" component={Marketing} />
         <Route path="/consulting" component={Consulting} />
         <Route path="/promises" component={Promises} />
+        <Route path="/development" component={Development} />
       </Switch>
     </Router>
   );
