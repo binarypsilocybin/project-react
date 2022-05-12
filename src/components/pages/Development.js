@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useReducer, useState } from "react";
 import Loader from "../../components/Loader";
+import CurrencyConversion from "../CurrencyConversion";
 const RiverInformation = lazy(() =>
   import(/* webpackChunkName: "RiverInformation" */ "../RiverInformation")
 );
@@ -47,6 +48,8 @@ export default function Development() {
       <Suspense fallback={<div>Loading Component</div>}>
         {show && <RiverInformation name={river} />}
       </Suspense>
+      <h1>Currency Conversion with Dropdown</h1>
+      <CurrencyConversion />
     </>
   );
 }
