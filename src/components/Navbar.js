@@ -74,6 +74,11 @@ function Navbar() {
                 Another Project
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/fetch" className="nav-links" onClick={closeMobileMenu}>
+                Fetch
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
