@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import StoreFront from "../onlineFetch/StoreFront";
+import Navbar from "../onlineFetch/Navbar";
+import { AppProvider, AppContext } from "../onlineFetch/AppContext";
 
-export default function FetchProject() {
+function FetchProject() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const app = useContext(AppContext);
 
   if (loggedIn) {
     return (
       <>
-        <StoreFront />
-        <button className="btn btn-outline" onClick={() => setLoggedIn(false)}>
-          Logout
-        </button>
+        <div className={app.theme === "dark" ? "dark" : ""}>
+          <Navbar />
+          <StoreFront />
+          <button
+            className="btn btn-outline"
+            onClick={() => setLoggedIn(false)}
+          >
+            Logout
+          </button>
+        </div>
       </>
     );
   } else {
@@ -23,4 +32,12 @@ export default function FetchProject() {
       </>
     );
   }
+}
+
+export default function AppWrapper() {
+  return (
+    <AppProvider>
+      <FetchProject />
+    </AppProvider>
+  );
 }
