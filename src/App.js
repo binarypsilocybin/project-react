@@ -10,7 +10,7 @@ import Marketing from "./components/pages/Marketing";
 import Consulting from "./components/pages/Consulting";
 import Promises from "./components/pages/Promises";
 import Development from "./components/pages/Development";
-import Fetch from "./components/pages/Fetch";
+import AppWrapper from "./components/pages/Fetch";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route path="/consulting" component={Consulting} />
         <Route path="/promises" component={Promises} />
         <Route path="/development" component={Development} />
-        <Route path="/fetch" component={Fetch} />
+        <Route path="/fetch" component={AppWrapper} />
       </Switch>
     </Router>
   );
